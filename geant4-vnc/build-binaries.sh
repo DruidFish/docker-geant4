@@ -19,5 +19,5 @@ if [ -z "$g4data" ];then
 	      geant4-base-dev /build/buildme.sh --withdata
 else
    docker run --rm -v "${g4src}:/geant4-src:ro" -v "${g4data}:/usr/local/geant4/data" \
-	      -v "$PWD:/build" -w "/tmp" geant4-base-dev /build/buildme.sh
+	      -v "$PWD:/build" -w "/tmp" geant4-base-dev /build/buildme.sh 
 fi 

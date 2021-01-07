@@ -14,8 +14,10 @@ cmake -DGEANT4_INSTALL_DATA=ON \
       -DGEANT4_USE_GDML=ON \
       -DCMAKE_BUILD_TYPE=Release \
       -DCMAKE_INSTALL_PREFIX=/usr/local/geant4 \
+      -DGEANT4_USE_QT=ON \
+      -DGEANT4_USE_OPENGL_X11=ON \
 	/geant4-src
-make -j`nproc`
+make -j6 
 make install/fast
 cd /usr/local/geant4
 if [ "$1" == "--withdata" ];then 
